@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background: linear-gradient(to top, rgba(51, 48, 247, 0.5)),
+                url('plans&pricing.jpg') no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(0, 0, 0, 0.6);
+            flex: 1;
+        }
+
+        .pricing h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .pricing p {
+            margin-bottom: 50px;
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        .pricing sup {
+            font-size: 1rem;
+            vertical-align: top;
+            margin-right: 3px;
+            font-weight: normal;
+        }
+
+        .pricing-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 30px 20px;
+            width: 280px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            font-weight: normal;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .features li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .features li.included i {
+            color: #00ff88;
+            font-size: 16px;
+        }
+
+        .features li.excluded {
+            color: rgba(255, 255, 255, 0.6);
+            padding-left: 26px;
+            font-style: italic;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn-default {
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        .btn-default:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .btn-primary {
+            background: #ff0077;
+            border: none;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #e6006c;
+        }
+
+
+        .nav-arrow {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: white;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            z-index: 1000;
+        }
+
+        .nav-arrow:hover {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .nav-left {
+            left: 30px;
+        }
+
+        .nav-right {
+            right: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2a1f9c;
+            color: #fff;
+            padding: 20px 50px;
+            font-size: 0.9rem;
+        }
+
+        .footer-top,
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-top h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .footer-right a {
+            margin-left: 15px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-right a:hover,
+        .footer-links a:hover {
+            color: #00c6ff;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            margin: 15px 0;
+        }
+
+        .footer-links a {
+            margin-right: 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-copy {
+            color: #ccc;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-top,
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <a href="contact.html" class="nav-arrow nav-left"><i class="fas fa-chevron-left"></i></a>
+    <a href="index.html" class="nav-arrow nav-right"><i class="fas fa-chevron-right"></i></a>
+
+    <section class="pricing">
+        <h2>Plans & Pricing</h2>
+        <p>Startup Framework is free forever — you only pay for custom domain hosting or to export your site.</p>
+
+        <div class="pricing-cards">
+
+            <div class="card">
+                <h3>Starter</h3>
+                <div class="price">9.99<sup>$</sup></div>
+                <ul class="features">
+                    <li class="included"><i class="fas fa-check"></i> 2 GB of space</li>
+                    <li class="included"><i class="fas fa-check"></i> 14 days of backups</li>
+                    <li class="included"><i class="fas fa-check"></i> Social integrations</li>
+                    <li class="included"><i class="fas fa-check"></i> Client billing</li>
+                    <li class="excluded">Remote access</li>
+                    <li class="excluded">Custom domain</li>
+                    <li class="excluded">24 hours support</li>
+                    <li class="excluded">Admin tools</li>
+                    <li class="excluded">Collab tools</li>
+                    <li class="excluded">User management</li>
+                </ul>
+                <a href="#" class="btn btn-default">Get Started</a>
+            </div>
+
+            <!-- Professional -->
+            <div class="card">
+                <h3>Professional</h3>
+                <div class="price">19.99<sup>$</sup></div>
+                <ul class="features">
+                    <li class="included"><i class="fas fa-check"></i> 2 GB of space</li>
+                    <li class="included"><i class="fas fa-check"></i> 14 days of backups</li>
+                    <li class="included"><i class="fas fa-check"></i> Social integrations</li>
+                    <li class="included"><i class="fas fa-check"></i> Client billing</li>
+                    <li class="included"><i class="fas fa-check"></i> Remote access</li>
+                    <li class="included"><i class="fas fa-check"></i> Custom domain</li>
+                    <li class="included"><i class="fas fa-check"></i> 24 hours support</li>
+                    <li class="excluded">Admin tools</li>
+                    <li class="excluded">Collab tools</li>
+                    <li class="excluded">User management</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+
+            <!-- Team -->
+            <div class="card">
+                <h3>Team</h3>
+                <div class="price">49.99<sup>$</sup></div>
+                <ul class="features">
+                    <li class="included"><i class="fas fa-check"></i> 2 GB of space</li>
+                    <li class="included"><i class="fas fa-check"></i> 14 days of backups</li>
+                    <li class="included"><i class="fas fa-check"></i> Social integrations</li>
+                    <li class="included"><i class="fas fa-check"></i> Client billing</li>
+                    <li class="included"><i class="fas fa-check"></i> Remote access</li>
+                    <li class="included"><i class="fas fa-check"></i> Custom domain</li>
+                    <li class="included"><i class="fas fa-check"></i> 24 hours support</li>
+                    <li class="included"><i class="fas fa-check"></i> Admin tools</li>
+                    <li class="included"><i class="fas fa-check"></i> Collaborative tools</li>
+                    <li class="included"><i class="fas fa-check"></i> User management</li>
+                </ul>
+                <a href="#" class="btn btn-default">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-left">
+                <h3>Startup 3</h3>
+            </div>
+            <div class="footer-right">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="#">Tour</a>
+                <a href="feature.html">Features</a>
+                <a href="plans_&_pricing.html">Pricing Plans</a>
+                <a href="#">Our Works</a>
+                <a href="#">Brands</a>
+                <a href="contact.html">Contacts</a>
+            </div>
+            <div class="footer-copy">
+                © 2017 Designmodo. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

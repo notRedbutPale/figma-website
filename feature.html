@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #111;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .features-section {
+            background: linear-gradient(to top,
+                    rgba(42, 31, 95, 0.6)),
+                url("desert.jpg") no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            position: relative;
+
+        }
+
+        .features-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .features-left {
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .features-left img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin-left: 0;
+            display: block;
+        }
+
+        .features-right {
+            flex: 1;
+            padding-left: 30px;
+            max-width: 600px;
+            position: relative;
+            left: -300px;
+        }
+
+        .features-right h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .features-right p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 0px;
+            color: #fff;
+        }
+
+        .feature-items {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .feature-item i {
+            font-size: 32px;
+            width: 100px;
+            margin-bottom: 12px;
+            color: #fff;
+            display: block;
+        }
+
+        .feature-item h3 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            width: 200px;
+            color: #fff;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item:hover i {
+            color: #00c6ff;
+        }
+
+        .dots-nav {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .dots-nav span {
+            width: 10px;
+            height: 10px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: block;
+            opacity: 0.6;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dots-nav span.active,
+        .dots-nav span:hover {
+            background: white;
+            opacity: 1;
+        }
+
+
+        .arrow-left,
+        .arrow-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 36px;
+            color: #fff;
+            opacity: 0.8;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            user-select: none;
+        }
+
+        .arrow-left:hover,
+        .arrow-right:hover {
+            opacity: 1;
+        }
+
+        .arrow-left {
+            left: 400px;
+        }
+
+        .arrow-right {
+            right: 60px;
+        }
+
+        @media (max-width: 900px) {
+            .features-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .features-left img {
+                margin-bottom: 30px;
+                max-width: 90%;
+            }
+
+            .feature-items {
+                justify-content: center;
+            }
+
+            .dots-nav {
+                right: 10px;
+            }
+
+            .arrow-left {
+                left: 170px;
+            }
+
+            .arrow-right {
+                right: 20px;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: #2a1f9c;
+            color: #fff;
+            padding: 20px 50px;
+            font-size: 0.9rem;
+        }
+
+        .footer-top,
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-top h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .footer-right a {
+            margin-left: 15px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-right a:hover,
+        .footer-links a:hover {
+            color: #00c6ff;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            margin: 15px 0;
+        }
+
+        .footer-links a {
+            margin-right: 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-copy {
+            color: #ccc;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-top,
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="features-section">
+        <div class="arrow-left">&#8249;</div>
+        <div class="features-container">
+            <div class="features-left">
+                <img src="feature_laptop.png" alt="Laptop">
+            </div>
+            <div class="features-right">
+                <h3>We Create Something New</h3>
+                <p>We have created a new product that will help designers, developers and companies create websites for
+                    their startups quickly and easily.</p>
+
+                <div class="feature-items">
+                    <div class="feature-item">
+                        <i class="fa-regular fa-clone"></i>
+                        <h3>30 NEW FEATURE PAGES</h3>
+                        <p>Startup Framework contains components and complex blocks which can easily.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-regular fa-gem"></i>
+                        <h3>USEFUL SYMBOL COMPONENTS</h3>
+                        <p>Samples will show you the feeling on how to play around using the components.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow-right">&#8250;</div>
+
+        <div class="dots-nav">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-left">
+                <h3>Startup 3</h3>
+            </div>
+            <div class="footer-right">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="#">Tour</a>
+                <a href="feature.html">Features</a>
+                <a href="plans_&_pricing.html">Pricing Plans</a>
+                <a href="#">Our Works</a>
+                <a href="#">Brands</a>
+                <a href="contact.html">Contacts</a>
+            </div>
+            <div class="footer-copy">
+                © 2017 Designmodo. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+
+        document.querySelector('.arrow-left').addEventListener('click', () => {
+            window.location.href = 'content.html';
+        });
+
+        document.querySelector('.arrow-right').addEventListener('click', () => {
+            window.location.href = 'form.html';
+        });
+    </script>
+</body>
+
+</html>

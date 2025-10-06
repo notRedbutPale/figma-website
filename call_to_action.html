@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call to Action</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: white;
+            height: 100vh;
+            position: relative;
+        }
+
+        .cta-section {
+            height: 100vh;
+            background: linear-gradient(to top, rgba(79, 62, 179, 0.6)),
+                url("images/call_to_action.jpg") no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .cta-content {
+            max-width: 700px;
+        }
+
+        .cta-content h1 {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        .cta-content p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 400px;
+            color: #ddd;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Buttons */
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .play-btn {
+            background: #EA3223;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .play-btn span {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 15px solid white;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            margin-left: 3px;
+        }
+
+        .cta-btn {
+            background: #00C9A7;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 30px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #009e86;
+        }
+
+        /* Navigation Arrows */
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 40px;
+            color: white;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-arrow:hover {
+            opacity: 1;
+        }
+
+        .nav-left {
+            left: 20px;
+        }
+
+        .nav-right {
+            right: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2a1f9c;
+            color: #fff;
+            padding: 20px 50px;
+            font-size: 0.9rem;
+        }
+
+        .footer-top,
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-top h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .footer-right a {
+            margin-left: 15px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-right a:hover,
+        .footer-links a:hover {
+            color: #00c6ff;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            margin: 15px 0;
+        }
+
+        .footer-links a {
+            margin-right: 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-copy {
+            color: #ccc;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+
+            .footer-top,
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation Arrows -->
+    <a href="testimonial.html" class="nav-arrow nav-left"><i class="fas fa-arrow-left"></i></a>
+    <a href="showcase.html" class="nav-arrow nav-right"><i class="fas fa-arrow-right"></i></a>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h1>Easy to setup.<br>Easy to maintain</h1>
+            <p>Bootstrap is a widely-used, sleek, intuitive and powerful front-end framework for faster and easier web
+                development.</p>
+
+            <div class="cta-buttons">
+                <button class="play-btn">
+                    <span></span>
+                </button>
+                <button class="cta-btn">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-left">
+                <h3>Startup 3</h3>
+            </div>
+            <div class="footer-right">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="#">Tour</a>
+                <a href="feature.html">Features</a>
+                <a href="plans_&_pricing.html">Pricing Plans</a>
+                <a href="#">Our Works</a>
+                <a href="#">Brands</a>
+                <a href="contact.html">Contacts</a>
+            </div>
+            <div class="footer-copy">
+                © 2017 Designmodo. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
