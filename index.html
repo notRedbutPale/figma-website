@@ -1128,28 +1128,203 @@
             font-size: 0.85rem;
         }
 
-        @media (max-width: 900px) {
-            .features-container {
-                flex-direction: column;
-                text-align: center;
-            }
+        /* ===== RESPONSIVENESS ===== */
 
-            .features-left img {
-                margin-bottom: 30px;
-                max-width: 90%;
-            }
+/* Tablets (<= 1024px) */
+@media (max-width: 1024px) {
+    section {
+        padding: 60px 30px;
+    }
 
-            .feature-items {
-                justify-content: center;
-            }
+    h1 {
+        font-size: 40px;
+    }
 
-            .footer-top,
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-                gap: 10px;
-            }
-        }
+    .hero {
+        padding: 60px 20px;
+        background-position: center;
+    }
+
+    .features-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .features-right {
+        left: 0;
+        padding-left: 0;
+    }
+
+    .features-left img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .form-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-card {
+        max-width: 90%;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .team-section {
+        text-align: center;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+        background-position: top;
+    }
+
+    .hero-content {
+        max-width: 90%;
+    }
+
+    .navbar nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cta-btn,
+    .btn-primary {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+
+    .features-section {
+        padding: 40px 20px;
+    }
+
+    .feature-items {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .testimonial-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+
+    .testimonial-card img {
+        margin-bottom: 10px;
+    }
+
+    .cta-content h1 {
+        font-size: 28px;
+    }
+
+    .cta-content p {
+        font-size: 15px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-right {
+        width: 100%;
+        min-width: auto;
+    }
+
+    footer {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .footer-top,
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Small Mobile (<= 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .hero-content {
+        padding: 0 10px;
+    }
+
+    .btn,
+    .cta-btn,
+    .btn-primary {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .feature-item p {
+        width: auto;
+    }
+
+    .form-card {
+        padding: 20px;
+        height: auto;
+    }
+
+    .contact-container {
+        padding: 0;
+    }
+
+    .work-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
     </style>
 </head>
 
@@ -1610,5 +1785,6 @@
     </script>
 
 </body>
+
 
 </html>
